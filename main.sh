@@ -16,8 +16,8 @@ done < url.txt;
 
 text=${1}
 
-[[ -z ${1} ]] && echo provide text && read text;
-[[ -z ${url} ]] && echo provide a valid webhook URL in url.txt && exit 1;
+[[ -z ${1} ]] && echo "provide text" && read text;
+[[ -z ${url} ]] && echo "provide a valid webhook URL in url.txt" && exit 1;
 
 send() {
 msg_content=" { \"content\": \"$text\" }";
